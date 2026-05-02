@@ -1,6 +1,6 @@
 <?php
 
-require_once '../private/db_conn.php';
+require_once '../config/db_conn.php';
 
 
 
