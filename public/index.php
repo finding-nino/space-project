@@ -28,8 +28,12 @@ $copyright = $row['copyright'];
 <head>
     <meta charset="UTF-8">
     <title>Space Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<img id="bg" src="<?php echo $imageUrl; ?>">
+
 
 
 <!--    <div>-->
@@ -43,6 +47,7 @@ $copyright = $row['copyright'];
 
 <div class="info-container" style="color: white">
     <h1><?= $title ?> </h1>
+
 
     <aside>
         <div id="info" >
@@ -64,6 +69,7 @@ $copyright = $row['copyright'];
 
 
 
+
 </body>
 </html>
 
@@ -75,9 +81,14 @@ $copyright = $row['copyright'];
 
 <script>
     //document.getElementById('<?php //echo $imageUrl; ?>//')
-    document.body.style.backgroundImage = "url('<?php echo $imageUrl; ?>')"
-    document.body.style.backgroundSize = "auto 100vh";
-    document.body.style.backgroundPosition = "contain";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundColor = "black";
+    //const img = new Image();
+    //img.onload = function() {
+    //    document.body.style.backgroundImage = "url('<?php //echo $imageUrl; ?>//')";
+    //    document.body.style.backgroundSize = "cover";
+    //    document.body.style.backgroundPosition = "center";
+    //    document.body.style.backgroundRepeat = "no-repeat";
+    //};
+    //img.src = "<?php //echo $imageUrl; ?>//";
+    //document.body.style.backgroundColor = "black";
+    //document.body.style.minHeight = "100vh";
 </script>

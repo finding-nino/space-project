@@ -1,0 +1,22 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+    - app-network
+
+  phpfpm:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - app-network
+
+networks:
+  app-network:
