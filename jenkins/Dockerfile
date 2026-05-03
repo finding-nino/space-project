@@ -2,5 +2,7 @@ FROM jenkins/jenkins:lts
 USER root
 RUN apt-get update \
     && apt-get install -y docker.io \
+    && curl -L "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-linux-aarch64" -o /usr/local/bin/docker-compose \
+    && chmod +x /usr/local/bin/docker-compose \
     && rm -rf /var/lib/apt/lists/*
 USER jenkins
