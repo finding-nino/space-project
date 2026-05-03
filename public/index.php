@@ -27,7 +27,7 @@ $copyright = $row['copyright'];
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Space Dashboard</title>
+    <title>Space Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
