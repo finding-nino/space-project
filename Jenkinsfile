@@ -9,12 +9,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker-compose down'
+                sh 'docker-compose stop nginx phpfpm'
+                sh 'docker-compose rm -f nginx phpfpm'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'docker-compose up --build -d'
+                sh 'docker-compose up --build -d nginx phpfpm'
             }
         }
     }
