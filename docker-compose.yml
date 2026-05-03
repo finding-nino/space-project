@@ -31,6 +31,7 @@ services:
         - jenkins_data:/var/jenkins_home
         - /var/run/docker.sock:/var/run/docker.sock
         - /home/nino/jenkins-env:/env
+        - /home/nino/space-project:/var/jenkins_home/workspace/space-project
     restart: always
     networks:
       - app-network
